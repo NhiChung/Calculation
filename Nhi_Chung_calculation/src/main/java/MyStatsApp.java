@@ -9,10 +9,16 @@ import org.apache.commons.cli.ParseException;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.math3.stat.StatUtils;
 
+import javax.swing.*;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 /**
@@ -29,6 +35,34 @@ public class MyStatsApp {
      *
      * @param args an array of String arguments to be parsed
      */
+    private static void printDateTime() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        writeFile("Current Date time: " + dtf.format(now).toString());
+    }
+    private static void createFile() {
+        try {
+            File myObj = new File("NhiChung_Calculation.txt");
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+    private static void writeFile(String text) {
+        try {
+            FileWriter myWriter = new FileWriter("NhiChung_Calculation.txt", true);
+            myWriter.write(text+ "\r\n");
+            myWriter.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
     public void run(String[] args) {
 
         CommandLine line = parseArguments(args);
@@ -39,8 +73,12 @@ public class MyStatsApp {
             String fileName = line.getOptionValue("filename");
 
             double[] data = readData(fileName);
+
+            createFile();
+            printDateTime();
             calculateAndPrintStats(data);
 
+            System.out.println("Write results to a file successfully");
         } else {
             printAppHelp();
         }
@@ -81,6 +119,14 @@ public class MyStatsApp {
      * @param fileName file of application data
      * @return array of double values
      */
+    private boolean isValid (double number) {
+        return number<=20 && number >=-20;
+    }
+    private static void showWarningMessage() {
+        JFrame f = new JFrame();
+        JOptionPane.showMessageDialog(f, "Please enter numbers from -20 to 20.",
+                "Alert", JOptionPane.WARNING_MESSAGE);
+    }
     private double[] readData(String fileName) {
 
         var data = new ArrayList<Double>();
@@ -90,12 +136,15 @@ public class MyStatsApp {
              var csvReader = new CSVReaderBuilder(reader).build()) {
 
             String[] nextLine;
-
             while ((nextLine = csvReader.readNext()) != null) {
 
                 for (String e : nextLine) {
-
-                    data.add(Double.parseDouble(e));
+                    if (isValid(Double.parseDouble(e))) {
+                        data.add(Double.parseDouble(e));
+                    } else {
+                        showWarningMessage();
+                        break;
+                    }
                 }
             }
 
@@ -142,11 +191,11 @@ public class MyStatsApp {
      */
     private void calculateAndPrintStats(double[] data) {
 
-        System.out.format("Geometric mean: %f%n", StatUtils.geometricMean(data));
-        System.out.format("Arithmetic mean: %f%n", StatUtils.mean(data));
-        System.out.format("Max: %f%n", StatUtils.max(data));
-        System.out.format("Min: %f%n", StatUtils.min(data));
-        System.out.format("Sum: %f%n", StatUtils.sum(data));
-        System.out.format("Variance: %f%n", StatUtils.variance(data));
+        writeFile("Geometric mean: " + StatUtils.geometricMean(data));
+        writeFile("Arithmetic mean: " + StatUtils.mean(data));
+        writeFile("Max: " + StatUtils.max(data));
+        writeFile("Min: " + StatUtils.min(data));
+        writeFile("Sum: " + StatUtils.sum(data));
+        writeFile("Variance: " + StatUtils.variance(data) + "\r\n");
     }
 }
