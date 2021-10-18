@@ -1,8 +1,0 @@
-Current Date time: 2021/10/14 18:36:04
-Geometric mean: 3.4125619929429685
-Arithmetic mean: 4.16875
-Max: 8.7
-Min: 1.0
-Sum: 66.7
-Variance: 6.158291666666666
-
