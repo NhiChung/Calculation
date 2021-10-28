@@ -1,6 +1,7 @@
 package com.NhiChung.Selenium.selenium4;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+//import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,12 +10,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.SoftAssert;
+import org.testng.Assert;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class UITesting extends SeleniumBaseTest{
@@ -38,7 +37,6 @@ public class UITesting extends SeleniumBaseTest{
 
     @Test
     void loginGoogle() throws InterruptedException {
-        try {
             String username="nhilx150017@gmail.com";
             String password="tuyet_trang2602";
 
@@ -52,118 +50,92 @@ public class UITesting extends SeleniumBaseTest{
 
             driver.get("https://youtube.com");
             TimeUnit.SECONDS.sleep(5);
-
-        } catch (Exception e) {
-        }
-
     }
 
     @Test
-    void searchNormalText() {
-        try {
+    void searchNormalText() throws InterruptedException {
             WebElement input = driver.findElement(By.name("q"));
             input.sendKeys("How to use Selenium");
             input.submit();
 
-            TimeUnit.SECONDS.sleep(2);
+            TimeUnit.SECONDS.sleep(1);
             driver.findElement(By.xpath("//a[contains(@href, 'selenium.dev')]")).click();
-            TimeUnit.SECONDS.sleep(5);
 
-
-        } catch (Exception e) {
-
-        }
     }
 
     @Test
     void trimText() {
         // Trim method() is the method returns a new string, without any of the leading or the trailing white spaces.
-        try {
-            WebElement input = driver.findElement(By.name("q"));
+             WebElement input = driver.findElement(By.name("q"));
             input.sendKeys("       Selenium    ");
             input.submit();
-            TimeUnit.SECONDS.sleep(2);
             driver.findElement(By.xpath("//input[@value='Selenium']"));
-
-
-        } catch (Exception e) {
-
-        }
     }
 
     @Test
     void googleCalculator() {
-        try {
             WebElement input = driver.findElement(By.name("q"));
             input.sendKeys("1+5");
             input.submit();
 
-            TimeUnit.SECONDS.sleep(2);
             String result = driver.findElement(By.xpath("//*[@id=\"cwos\"]")).getText();
 
-            if(result.equals("6")){
-                System.out.println("Pass");
-            }
-            else {
-                System.out.println("Fail");
-            }
-
-        } catch (Exception e) {
-
-        }
+            Assert.assertEquals("6", result);
     }
 
     @Test
-    void googleTranslate() {
-        try {
-            WebElement input = driver.findElement(By.name("q"));
-            input.sendKeys("translate");
-            input.submit();
+    void googleTranslate() throws InterruptedException {
+        SoftAssert softAssert = new SoftAssert();
+        WebElement input = driver.findElement(By.name("q"));
+        input.sendKeys("translate");
+        input.submit();
 
-            driver.findElement(By.xpath("//*[@id=\"tw-source-text-ta\"]")).sendKeys("ni hao");
-            TimeUnit.SECONDS.sleep(2);
-            String result = driver.findElement(By.xpath("//*[@id=\"kAz1tf\"]")).getText();
+        driver.findElement(By.xpath("//*[@id=\"tw-source-text-ta\"]")).sendKeys("ni hao");
+        TimeUnit.SECONDS.sleep(2);
+        String result = driver.findElement(By.xpath("//*[@id=\"kAz1tf\"]")).getText();
 
-            if(result.equals("hello") || result.equals("hi") || result.equals("Hi") || result.equals("Hello")){
-                System.out.println("Pass");
-            }
-            else {
-                System.out.println("Fail");
-            }
+        boolean result1 = result.equals("Hello") ||
+                result.equals("Hi") ||
+                result.equals("hello") ||
+                result.equals("hi");
+        softAssert.assertTrue(result1);
+//        if(result.equals("hello") || result.equals("hi") || result.equals("Hi") || result.equals("Hello")){
+//            System.out.println("Pass");
+//        }
+//        else {
+//            System.out.println("Fail");
+//        }
 
-
-        } catch (Exception e) {
-
-        }
     }
 
     @Test
-    void googleTranslate2() {
-        try {
-            WebElement input = driver.findElement(By.name("q"));
-            input.sendKeys("chinese to english");
-            input.submit();
+    void googleTranslate2() throws InterruptedException {
+        SoftAssert softAssert = new SoftAssert();
+        WebElement input = driver.findElement(By.name("q"));
+        input.sendKeys("chinese to english");
+        input.submit();
 
-            driver.findElement(By.xpath("//*[@id=\"tw-source-text-ta\"]")).sendKeys("ni hao");
-            TimeUnit.SECONDS.sleep(2);
-            String result = driver.findElement(By.xpath("//*[@id=\"kAz1tf\"]")).getText();
+        driver.findElement(By.xpath("//*[@id=\"tw-source-text-ta\"]")).sendKeys("ni hao");
+        TimeUnit.SECONDS.sleep(2);
+        String result = driver.findElement(By.xpath("//*[@id=\"kAz1tf\"]")).getText();
 
-            if(result.equals("hello") || result.equals("hi") || result.equals("Hi") || result.equals("Hello")){
-                System.out.println("Pass");
-            }
-            else {
-                System.out.println("Fail");
-            }
+        boolean result1 = result.equals("Hello") ||
+                result.equals("Hi") ||
+                result.equals("hello") ||
+                result.equals("hi");
+        softAssert.assertTrue(result1);
 
+//        if(result.equals("hello") || result.equals("hi") || result.equals("Hi") || result.equals("Hello")){
+//            System.out.println("Pass");
+//        }
+//        else {
+//            System.out.println("Fail");
+//        }
 
-        } catch (Exception e) {
-
-        }
     }
 
     @Test
-    void unitConverter_changeValue() {
-        try {
+    void unitConverter_changeValue(){
             WebElement input = driver.findElement(By.name("q"));
             input.sendKeys("km to miles");
             input.submit();
@@ -171,20 +143,15 @@ public class UITesting extends SeleniumBaseTest{
             WebElement convertValue = driver.findElement(By.xpath("//input[@value='1']"));
             convertValue.clear();
             convertValue.sendKeys("100");
-            TimeUnit.SECONDS.sleep(2);
 
             WebElement convertValue2 = driver.findElement(By.xpath("//input[@value='0.621371']"));
             convertValue2.clear();
             convertValue2.sendKeys("10");
 
-        } catch (Exception e) {
-
-        }
     }
 
     @Test
     void unitConverter_changeValue2() {
-        try {
             WebElement input = driver.findElement(By.name("q"));
             input.sendKeys("5km=?m");
             input.submit();
@@ -192,37 +159,25 @@ public class UITesting extends SeleniumBaseTest{
             WebElement convertValue = driver.findElement(By.xpath("//input[@value='1']"));
             convertValue.clear();
             convertValue.sendKeys("100");
-            TimeUnit.SECONDS.sleep(2);
 
             WebElement convertValue2 = driver.findElement(By.xpath("//input[@value='5000']"));
             convertValue2.clear();
             convertValue2.sendKeys("10");
 
-        } catch (Exception e) {
-
-        }
     }
 
     @Test
     void colorPicker() {
-        try {
             WebElement input = driver.findElement(By.name("q"));
             input.sendKeys("color picker");
             input.submit();
 
             WebElement convertValue = driver.findElement(By.id("kyN4Jf3TGqF__slider-background"));
 
-
-
-        } catch (Exception e) {
-
-        }
     }
 
     @Test
     void unitConverter_ChangeUnitType() {
-        // use selection of unit converter
-        try {
             WebElement input = driver.findElement(By.name("q"));
             input.sendKeys("km to miles");
             input.submit();
@@ -233,10 +188,6 @@ public class UITesting extends SeleniumBaseTest{
             Select selector2 =  new Select(driver.findElement(By.xpath("//div[@id='NotFQb']/select")));
             selector2.selectByVisibleText("Millimetre");
 
-
-        } catch (Exception e) {
-
-        }
     }
 
 }

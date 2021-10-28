@@ -19,7 +19,7 @@ public class RestAssuredTest extends RestAssuredBaseTest {
                 .addParam("days", "1");
         Response rp = RestAssured.given(spec.build()).get("/current.json");
 
-        log.info("Nhi Chung");
+//        log.info("Nhi Chung");
         rp.then().assertThat().log().all().body("location.name", equalTo("Lviv"));
     }
 }
