@@ -1,5 +1,6 @@
 package com.NhiChung.Selenium.core;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -10,7 +11,10 @@ public class DriverWrapper {
 
     private DriverWrapper() {
         ChromeDriverService service = ChromeDriverService.createServiceWithConfig(new ChromeOptions());
-        WebDriver driver = new ChromeDriver(service);
+        driver = new ChromeDriver(service);
+
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
     }
 
     public static WebDriver getDriver(){
