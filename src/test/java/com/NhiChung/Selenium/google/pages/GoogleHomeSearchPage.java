@@ -5,7 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class GoogleHomeSearchPage extends BaseGooglePage{
-    private WebElement googleSearchField = DriverWrapper.getDriver().findElement(By.name("q"));
+
+    private WebElement googleSearchField = DriverWrapper.getDriver().findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input"));
     private WebElement googleSearchButton = DriverWrapper.getDriver().findElement(By.name("btnK"));
 
     public GoogleHomeSearchPage setTextToSearchField(String text) {
