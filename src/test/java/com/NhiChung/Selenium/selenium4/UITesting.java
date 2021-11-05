@@ -6,14 +6,15 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 
 public class UITesting extends SeleniumBaseTest{
+
     @Test
-    void loginGoogle() throws InterruptedException {
+    void loginGoogle() {
         String username="nhilx150017@gmail.com";
         String password="tuyet_trang2602";
         String url="https://youtube.com";
 
-        new GoogleLoginPage()
-                .openLoginPage()
+        new GoogleHomeSearchPage()
+                .goToLoginPage()
                 .enterEmail(username)
                 .enterPassword(password)
                 .checkLoginGoogle(url);
@@ -66,47 +67,6 @@ public class UITesting extends SeleniumBaseTest{
                 .getTranslateResult("Xin chao");
 
         Assert.assertTrue(result.equals("hello")  || result.equals("Hello") || result.equals("Hi") || result.equals("Hi"));
-    }
-
-    @Test
-    void unitConverter_changeValue(){
-        new GoogleHomeSearchPage()
-            .setTextToSearchField("km to miles")
-            .goToConverterUnitPage()
-            .setTextToUnitConverterField("//input[@value='1']", "100");
-
-        Assert.assertEquals(true, true);
-    }
-
-    @Test
-    void unitConverter_changeValue3(){
-        new GoogleHomeSearchPage()
-                .setTextToSearchField("km to miles")
-                .goToConverterUnitPage()
-                .setTextToUnitConverterField("//input[@value='0.621371']", "10");
-
-        Assert.assertEquals(true, true);
-    }
-
-    @Test
-    void unitConverter_changeValue2() {
-        new GoogleHomeSearchPage()
-                .setTextToSearchField("5km=?m")
-                .goToConverterUnitPage()
-                .setTextToUnitConverterField("//input[@value='1']", "100");
-
-        Assert.assertEquals(true, true);
-    }
-
-    @Test
-    void unitConverter_changeValue4() {
-        new GoogleHomeSearchPage()
-                .setTextToSearchField("5km=?m")
-                .goToConverterUnitPage()
-                .setTextToUnitConverterField("//input[@value='5000']", "10");
-
-        Assert.assertEquals(true, true);
-
     }
 
     @Test

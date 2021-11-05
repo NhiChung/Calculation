@@ -5,9 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class GoogleHomeSearchPage extends BaseGooglePage{
-
-    private WebElement googleSearchField = DriverWrapper.getDriver().findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input"));
-    private WebElement googleSearchButton = DriverWrapper.getDriver().findElement(By.name("btnK"));
+    private WebElement googleLoginButton = DriverWrapper.getDriver().findElement(By.xpath("//*[@id=\"gb\"]/div/div[2]/a"));
+    private WebElement googleSearchField = DriverWrapper.getDriver().findElement(By.name("q"));
+//    private WebElement googleSearchButton = DriverWrapper.getDriver().findElement(By.name("btnK"));
 
     public GoogleHomeSearchPage setTextToSearchField(String text) {
         googleSearchField.sendKeys(text);
@@ -21,7 +21,7 @@ public class GoogleHomeSearchPage extends BaseGooglePage{
     }
 
     public GoogleSearchResultPage clickGoogleSearchButton() {
-        googleSearchButton.click();
+        googleSearchField.submit();
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -37,12 +37,6 @@ public class GoogleHomeSearchPage extends BaseGooglePage{
         return new GoogleTranslatePage();
     }
 
-    public GoogleUnitConverter goToConverterUnitPage() {
-        googleSearchField.submit();
-
-        return new GoogleUnitConverter();
-    }
-
     public GoogleColorPickerPage goToColorPickerPage() {
         googleSearchField.submit();
 
@@ -53,5 +47,11 @@ public class GoogleHomeSearchPage extends BaseGooglePage{
         googleSearchField.submit();
 
         return new GoogleCalculatorPage();
+    }
+
+    public GoogleLoginPage goToLoginPage() {
+        googleLoginButton.click();
+
+        return new GoogleLoginPage();
     }
 }

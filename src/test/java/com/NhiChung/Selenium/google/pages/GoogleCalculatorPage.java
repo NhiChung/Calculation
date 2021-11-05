@@ -5,7 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class GoogleCalculatorPage extends BaseGooglePage{
-    private WebElement googleResultCalculator = DriverWrapper.getDriver().findElement(By.xpath("//*[@id=\"cwos\"]"));
+    private WebElement googleResultCalculator = DriverWrapper.getDriver().findElement(By.id("cwos"));
+
 
     public String getCalculatorResult() {
         return googleResultCalculator.getText();
