@@ -1,4 +1,6 @@
 package com.NhiChung.Selenium.google.pages;
 
-public class BaseGooglePage {
+import com.NhiChung.Selenium.BaseTest;
+
+public class BaseGooglePage extends BaseTest {
 }

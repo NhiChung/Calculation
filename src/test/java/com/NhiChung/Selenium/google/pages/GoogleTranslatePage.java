@@ -15,6 +15,8 @@ public class GoogleTranslatePage extends BaseGooglePage{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        log.info(String.format("Set %s to the Translate field", text));
         return googleTranslateResult.getText();
     }
 

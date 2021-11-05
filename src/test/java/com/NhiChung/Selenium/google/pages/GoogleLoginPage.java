@@ -13,6 +13,8 @@ public class GoogleLoginPage extends BaseGooglePage{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        log.info(String.format("Enter Email: %s", text));
         return this;
     }
 
@@ -25,6 +27,9 @@ public class GoogleLoginPage extends BaseGooglePage{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        log.info(String.format("Enter Password: %s", text));
+
         return this;
     }
 

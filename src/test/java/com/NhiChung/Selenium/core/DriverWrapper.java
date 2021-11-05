@@ -9,11 +9,9 @@ public class DriverWrapper {
     private static WebDriver driver = null;
 
     private DriverWrapper() {
+        System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver.exe");
         ChromeDriverService service = ChromeDriverService.createServiceWithConfig(new ChromeOptions());
         driver = new ChromeDriver(service);
-
-//        WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
     }
 
     public static WebDriver getDriver(){
