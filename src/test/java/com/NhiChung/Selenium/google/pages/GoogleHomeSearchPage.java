@@ -1,6 +1,7 @@
 package com.NhiChung.Selenium.google.pages;
 
 import com.NhiChung.Selenium.core.DriverWrapper;
+import com.NhiChung.Selenium.core.logger.MyLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -15,7 +16,7 @@ public class GoogleHomeSearchPage extends BaseGooglePage{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        log.info(String.format("Set %s to Search field ", text));
+        MyLogger.LOGGER.info(String.format("Set %s to Search field ", text));
 
         return this;
     }
@@ -27,7 +28,7 @@ public class GoogleHomeSearchPage extends BaseGooglePage{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        log.info("click Google Search button");
+        MyLogger.LOGGER.info("click Google Search button");
 
         return new GoogleSearchResultPage();
     }
@@ -35,28 +36,28 @@ public class GoogleHomeSearchPage extends BaseGooglePage{
     public GoogleTranslatePage goToTranslatePage() {
         googleSearchField.submit();
 
-        log.info("Go to Translate page");
+        MyLogger.LOGGER.info("Go to Translate page");
         return new GoogleTranslatePage();
     }
 
     public GoogleColorPickerPage goToColorPickerPage() {
         googleSearchField.submit();
 
-        log.info("Go o Color Picker page");
+        MyLogger.LOGGER.info("Go o Color Picker page");
         return new GoogleColorPickerPage();
     }
 
     public GoogleCalculatorPage goToCalculatorPage() {
         googleSearchField.submit();
 
-        log.info("Go to Calculator page");
+        MyLogger.LOGGER.info("Go to Calculator page");
         return new GoogleCalculatorPage();
     }
 
     public GoogleLoginPage goToLoginPage() {
         googleLoginButton.click();
 
-        log.info("Go to Login page");
+        MyLogger.LOGGER.info("Go to Login page");
         return new GoogleLoginPage();
     }
 }

@@ -1,6 +1,7 @@
 package com.NhiChung.Selenium.google.pages;
 
 import com.NhiChung.Selenium.core.DriverWrapper;
+import com.NhiChung.Selenium.core.logger.MyLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -16,7 +17,7 @@ public class GoogleTranslatePage extends BaseGooglePage{
             e.printStackTrace();
         }
 
-        log.info(String.format("Set %s to the Translate field", text));
+        MyLogger.LOGGER.info(String.format("Set %s to the Translate field", text));
         return googleTranslateResult.getText();
     }
 

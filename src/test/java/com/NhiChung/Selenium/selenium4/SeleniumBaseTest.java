@@ -8,8 +8,7 @@ import org.testng.annotations.BeforeMethod;
 public abstract class SeleniumBaseTest extends BaseTest {
     @BeforeMethod
     public void preCondition() {
-        DriverWrapper.getDriver().navigate().to("https://www.google.com");
-//        DriverWrapper.getDriver().get("https://www.google.com");
+        DriverWrapper.getDriver().get("https://www.google.com");
     }
 
     @AfterTest

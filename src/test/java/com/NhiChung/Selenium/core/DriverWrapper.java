@@ -1,15 +1,17 @@
 package com.NhiChung.Selenium.core;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverWrapper {
     private static WebDriver driver = null;
 
     private DriverWrapper() {
-        System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         ChromeDriverService service = ChromeDriverService.createServiceWithConfig(new ChromeOptions());
         driver = new ChromeDriver(service);
     }

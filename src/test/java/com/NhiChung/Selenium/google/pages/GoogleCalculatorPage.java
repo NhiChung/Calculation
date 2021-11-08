@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 public class GoogleCalculatorPage extends BaseGooglePage{
     private WebElement googleResultCalculator = DriverWrapper.getDriver().findElement(By.id("cwos"));
 
-
     public String getCalculatorResult() {
         return googleResultCalculator.getText();
     }

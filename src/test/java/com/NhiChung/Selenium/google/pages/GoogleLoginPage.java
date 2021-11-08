@@ -1,6 +1,7 @@
 package com.NhiChung.Selenium.google.pages;
 
 import com.NhiChung.Selenium.core.DriverWrapper;
+import com.NhiChung.Selenium.core.logger.MyLogger;
 import org.openqa.selenium.By;
 
 public class GoogleLoginPage extends BaseGooglePage{
@@ -14,7 +15,7 @@ public class GoogleLoginPage extends BaseGooglePage{
             e.printStackTrace();
         }
 
-        log.info(String.format("Enter Email: %s", text));
+        MyLogger.LOGGER.info(String.format("Enter Email: %s", text));
         return this;
     }
 
@@ -28,7 +29,7 @@ public class GoogleLoginPage extends BaseGooglePage{
             e.printStackTrace();
         }
 
-        log.info(String.format("Enter Password: %s", text));
+        MyLogger.LOGGER.info(String.format("Enter Password: %s", text));
 
         return this;
     }

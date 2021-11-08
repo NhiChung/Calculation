@@ -21,22 +21,6 @@ public class Selenium4Test extends SeleniumBaseTest {
     }
 
     @Test
-    void loginGoogle() {
-        log.info("start verify login");
-        String username="nhilx150017@gmail.com";
-        String password="tuyet_trang2602";
-        String url="https://youtube.com";
-
-        new GoogleHomeSearchPage()
-                .goToLoginPage()
-                .enterEmail(username)
-                .enterPassword(password)
-                .checkLoginGoogle(url);
-        Assert.assertEquals(true, true);
-        log.info("Logged in");
-    }
-
-    @Test
     void searchNormalText() {
         log.info("Start verify Search normal test");
 
