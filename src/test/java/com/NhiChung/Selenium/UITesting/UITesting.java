@@ -11,7 +11,7 @@ public class UITesting extends BaseTest{
                 .chooseLanguage()
                 .setTextToLocationField("Paris")
                 .chooseMonth("February")
-                .chooseDate()
+                .chooseDate(13, 15)
                 .chooseAdult(2)
                 .clickSearchButton()
                 .checkLocationSearchResult("Paris");

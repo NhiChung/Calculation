@@ -2,23 +2,23 @@ package com.NhiChung.Selenium.PageObject;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+
 import static com.codeborne.selenide.Selenide.$;
 
 public class BookingHomePage {
     private SelenideElement searchDateField = $(By.xpath("//*[@data-mode=\"checkin\"]"));
     private SelenideElement buttonCalendarNext = $(By.xpath("//*[@data-bui-ref=\"calendar-next\"]"));
     private SelenideElement searchDateLabel = $(".bui-calendar__month");
-    private SelenideElement fromDate = $(By.xpath("//span[text()='13']"));
-    private SelenideElement toDate = $(By.xpath("//span[text()='15']"));
+    private SelenideElement fromDate;
+    private SelenideElement toDate;
     private SelenideElement searchAdultField = $(".xp__guests__count");
     private SelenideElement searchAdultLabel = $(By.xpath("//*[@data-bui-ref=\"input-stepper-value\"]"));
-
-    private SelenideElement searchAdultDecreaseButton = $(By.xpath("//*[@data-bui-ref=\"input-stepper-subtract-button\"]"));;
-    private SelenideElement searchAdultIncreaseButton  = $(By.xpath("//*[@data-bui-ref=\"input-stepper-add-button\"]"));;
+    private SelenideElement searchAdultDecreaseButton = $(By.xpath("//*[@data-bui-ref=\"input-stepper-subtract-button\"]"));
+    private SelenideElement searchAdultIncreaseButton = $(By.xpath("//*[@data-bui-ref=\"input-stepper-add-button\"]"));
+;
     private SelenideElement searchButton = $(".sb-searchbox__button ");
-
     private SelenideElement buttonShowLanguageModal = $(By.xpath("//*[@data-modal-id=\"language-selection\"]"));
-    private SelenideElement buttonEnglishLanguage = $(By.xpath("//*[@data-lang=\"en-gb\"]")) ;
+    private SelenideElement buttonEnglishLanguage = $(By.xpath("//*[@data-lang=\"en-gb\"]"));
     private SelenideElement searchLocationField = $(By.name("ss"));
 
     public BookingHomePage chooseLanguage() {
@@ -38,7 +38,7 @@ public class BookingHomePage {
         searchDateField.click();
 
         String month = searchDateLabel.getText().split(" ")[0];
-        while(!month.equals(text)) {
+        while (!month.equals(text)) {
             buttonCalendarNext.click();
             month = searchDateLabel.getText().split(" ")[0];
         }
@@ -46,7 +46,12 @@ public class BookingHomePage {
         return this;
     }
 
-    public BookingHomePage chooseDate() {
+    public BookingHomePage chooseDate(int from, int to) {
+        String xpathFromDate = "//span[text()='" + from + "']";
+        String xpathToDate = "//span[text()='" + to + "']";
+
+        fromDate = $(By.xpath(xpathFromDate));
+        toDate = $(By.xpath(xpathToDate));
         fromDate.click();
         toDate.click();
 
@@ -58,12 +63,14 @@ public class BookingHomePage {
         searchAdultField.click();
 
         Integer adult = Integer.parseInt(searchAdultLabel.getText());
-        if (adult>value) {
-            searchAdultDecreaseButton.click();
-            adult--;
-        } else if (adult < value){
-            searchAdultIncreaseButton.click();
-            adult++;
+        while (adult != value) {
+            if (adult > value) {
+                searchAdultDecreaseButton.click();
+                adult--;
+            } else if (adult < value) {
+                searchAdultIncreaseButton.click();
+                adult++;
+            }
         }
 
         return this;

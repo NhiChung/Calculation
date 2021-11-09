@@ -10,6 +10,6 @@ public class BookingResultPage {
     private SelenideElement searchLocationField = $(By.name("ss"));
 
     public void checkLocationSearchResult(String text) {
-        searchLocationField.shouldHave(value("Paris"));
+        searchLocationField.shouldHave(value(text));
     }
 }
