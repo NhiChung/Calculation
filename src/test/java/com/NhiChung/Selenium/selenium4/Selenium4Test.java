@@ -2,16 +2,26 @@ package com.NhiChung.Selenium.selenium4;
 
 import com.NhiChung.Selenium.core.logger.MyLogger;
 import com.NhiChung.Selenium.google.pages.GoogleHomeSearchPage;
+import com.NhiChung.Selenium.utils.Listeners.TestListener;
+import io.qameta.allure.*;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners({TestListener.class})
+@Epic("Regression Tests")
+@Feature("Search Homepage Tests")
 public class Selenium4Test extends SeleniumBaseTest {
+
     @Test
     public void testingChromeAndSeleniumBasic() {
         Assert.assertEquals(true, true);
     }
 
-    @Test
+    @Test(priority = 0, description = "Search a normal test and get relative results")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Test Description: search with valid input")
+    @Story("valid input")
     public void testingBasingSearchOnGoogleMainPage() {
         MyLogger.LOGGER.info("start hello");
         String title = new GoogleHomeSearchPage()
@@ -68,7 +78,7 @@ public class Selenium4Test extends SeleniumBaseTest {
                 .goToTranslatePage()
                 .getTranslateResult("xin chao");
 
-        Assert.assertTrue(result.equals("hello")  || result.equals("Hello") || result.equals("Hi") || result.equals("Hi"));
+        Assert.assertTrue(result.equals("hello") || result.equals("Hello") || result.equals("Hi") || result.equals("Hi"));
 
         MyLogger.LOGGER.info("Pass");
     }
@@ -82,7 +92,7 @@ public class Selenium4Test extends SeleniumBaseTest {
                 .goToTranslatePage()
                 .getTranslateResult("Xin chao");
 
-        Assert.assertTrue(result.equals("hello")  || result.equals("Hello") || result.equals("Hi") || result.equals("Hi"));
+        Assert.assertTrue(result.equals("hello") || result.equals("Hello") || result.equals("Hi") || result.equals("Hi"));
 
         MyLogger.LOGGER.info("Pass");
     }

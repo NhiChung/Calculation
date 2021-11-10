@@ -1,12 +1,17 @@
 package com.NhiChung.Selenium.google.pages;
 
 import com.NhiChung.Selenium.core.DriverWrapper;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
+/**
+ *This is a google search result page class representation
+ */
 public class GoogleSearchResultPage extends BaseGooglePage{
 
+    /**
+     * method getTitle of the page
+     *
+     * @return String
+     */
     public String getTitle() {
         return DriverWrapper.getDriver().getTitle();
     }
