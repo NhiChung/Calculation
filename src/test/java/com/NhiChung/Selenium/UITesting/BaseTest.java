@@ -9,9 +9,8 @@ public class BaseTest {
     @BeforeMethod
     public void preCondition() {
         WebDriverManager.chromedriver().setup();
-
-        // set the browser name to IE
         System.setProperty("selenide.browser", "Chrome");
+
         open("https://www.booking.com/");
     }
 }

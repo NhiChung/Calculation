@@ -58,11 +58,11 @@ public class BookingHomePage {
         return this;
     }
 
-    public BookingHomePage chooseAdult(Integer value) {
+    public BookingHomePage chooseAdult(int value) {
 
         searchAdultField.click();
 
-        Integer adult = Integer.parseInt(searchAdultLabel.getText());
+        int adult = Integer.parseInt(searchAdultLabel.getText());
         while (adult != value) {
             if (adult > value) {
                 searchAdultDecreaseButton.click();
