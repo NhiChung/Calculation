@@ -1,4 +1,4 @@
-package com.NhiChung.Selenium.core.logger;
+package main.java.com.NhiChung.core.logger;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

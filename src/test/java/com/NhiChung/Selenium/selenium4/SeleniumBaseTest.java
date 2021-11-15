@@ -1,7 +1,7 @@
 package com.NhiChung.Selenium.selenium4;
 
 import com.NhiChung.Selenium.BaseTest;
-import com.NhiChung.Selenium.core.DriverWrapper;
+import main.java.com.NhiChung.core.DriverWrapper;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 

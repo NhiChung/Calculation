@@ -1,15 +1,16 @@
-package com.NhiChung.Selenium.google.pages;
+package main.java.com.NhiChung.google.pages;
 
-import com.NhiChung.Selenium.core.DriverWrapper;
-import com.NhiChung.Selenium.core.logger.MyLogger;
 import io.qameta.allure.Step;
+import main.java.com.NhiChung.core.DriverWrapper;
+import main.java.com.NhiChung.core.logger.MyLogger;
+import main.java.com.NhiChung.google.pages.BaseGooglePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 /**
 *This is a google search home page class representation
 */
-public class GoogleHomeSearchPage extends BaseGooglePage{
+public class GoogleHomeSearchPage extends BaseGooglePage {
     private WebElement googleLoginButton = DriverWrapper.getDriver().findElement(By.xpath("//*[@id=\"gb\"]/div/div[2]/a"));
     private WebElement googleSearchField = DriverWrapper.getDriver().findElement(By.name("q"));
 

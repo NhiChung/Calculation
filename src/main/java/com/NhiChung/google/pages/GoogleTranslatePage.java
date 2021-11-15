@@ -1,14 +1,15 @@
-package com.NhiChung.Selenium.google.pages;
+package main.java.com.NhiChung.google.pages;
 
-import com.NhiChung.Selenium.core.DriverWrapper;
-import com.NhiChung.Selenium.core.logger.MyLogger;
+import main.java.com.NhiChung.core.DriverWrapper;
+import main.java.com.NhiChung.core.logger.MyLogger;
+import main.java.com.NhiChung.google.pages.BaseGooglePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 /**
  *This is a google translate page class representation
  */
-public class GoogleTranslatePage extends BaseGooglePage{
+public class GoogleTranslatePage extends BaseGooglePage {
     private WebElement googleTranslateField = DriverWrapper.getDriver().findElement(By.xpath("//*[@id=\"tw-source-text-ta\"]"));
     private WebElement googleTranslateResult = DriverWrapper.getDriver().findElement(By.xpath("//*[@id=\"kAz1tf\"]"));
 

@@ -1,11 +1,10 @@
-package com.NhiChung.Selenium.core;
+package main.java.com.NhiChung.core;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverWrapper {
     private static WebDriver driver = null;

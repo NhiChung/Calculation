@@ -1,6 +1,6 @@
-package com.NhiChung.Selenium.google.pages;
+package main.java.com.NhiChung.google.pages;
 
-import com.NhiChung.Selenium.core.DriverWrapper;
+import main.java.com.NhiChung.core.DriverWrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

@@ -1,9 +1,9 @@
 package com.NhiChung.Selenium.selenium4;
 
-import com.NhiChung.Selenium.core.logger.MyLogger;
-import com.NhiChung.Selenium.google.pages.GoogleHomeSearchPage;
 import com.NhiChung.Selenium.utils.Listeners.TestListener;
 import io.qameta.allure.*;
+import main.java.com.NhiChung.core.logger.MyLogger;
+import main.java.com.NhiChung.google.pages.GoogleHomeSearchPage;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
