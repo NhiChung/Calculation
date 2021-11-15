@@ -2,6 +2,7 @@ package com.NhiChung.Selenium.utils.Listeners;
 
 import com.NhiChung.Selenium.BaseTest;
 import com.NhiChung.Selenium.core.DriverWrapper;
+import com.NhiChung.Selenium.core.logger.MyLogger;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -29,19 +30,7 @@ public class TestListener extends BaseTest implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-        System.out.println("I am in onTestFailure method " + getTestMethodName(iTestResult) + " failed");
-
-        //Get driver from BaseTest and assign to local webdriver variable
-        Object testClass = iTestResult.getInstance();
-        WebDriver driver = ((DriverWrapper) testClass).getDriver();
-
-        //Allure ScreenShotRobot and SaveTestLog
-        if (driver instanceof WebDriver) {
-            System.out.println("Screenshot captured for test case:" + getTestMethodName(iTestResult));
-            saveScreenshotPNG(driver);
-        }
-
-        //Save a log on allure
-        saveTextLog(getTestMethodName(iTestResult) + "failed and screenshot taken!");
+        MyLogger.LOGGER.info("I am in onTestFailure method " + getTestMethodName(iTestResult) + " failed");
+        saveScreenshotPNG(DriverWrapper.getDriver());
     }
 }
