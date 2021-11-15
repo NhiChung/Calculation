@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class UITesting extends BaseTest{
     
     @Test
-    public void BookingCheck2() {
+    public void BookingCheck() {
         MyLogger.LOGGER.info("Verify search feature");
 
         new BookingHomePage()
