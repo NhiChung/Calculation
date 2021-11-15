@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16949606-6a8c-46f1-8d3b-5b1e83f7de14" name="Changes" comment="" />
+    <list default="true" id="16949606-6a8c-46f1-8d3b-5b1e83f7de14" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/NhiChung/Selenium/restAssured44/ReqresTesting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/NhiChung/Selenium/restAssured44/model/Authen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/NhiChung/Selenium/restAssured44/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/NhiChung/Selenium/selenium4/Selenium4Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/NhiChung/Selenium/selenium4/Selenium4Test.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,16 +148,6 @@
                 <item name="io.github.bonigarcia:webdrivermanager:5.0.3" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
                 <item name="com.github.docker-java:docker-java:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
                 <item name="com.github.docker-java:docker-java-core:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="com.fasterxml.jackson.core:jackson-databind:2.10.3" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="test2" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-                <item name="io.github.bonigarcia:webdrivermanager:5.0.3" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="com.github.docker-java:docker-java:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="com.github.docker-java:docker-java-core:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
                 <item name="com.github.docker-java:docker-java-api:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
               </path>
               <path>
@@ -768,16 +777,6 @@
                 <item name="io.github.bonigarcia:webdrivermanager:5.0.3" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
                 <item name="com.github.docker-java:docker-java:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
                 <item name="com.github.docker-java:docker-java-core:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="test2" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-                <item name="io.github.bonigarcia:webdrivermanager:5.0.3" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="com.github.docker-java:docker-java:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="com.github.docker-java:docker-java-core:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="com.fasterxml.jackson.core:jackson-databind:2.10.3" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -1436,16 +1435,6 @@
                 <item name="io.github.bonigarcia:webdrivermanager:5.0.3" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
                 <item name="com.github.docker-java:docker-java:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
                 <item name="com.github.docker-java:docker-java-core:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="com.fasterxml.jackson.core:jackson-databind:2.10.3" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="test2" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-                <item name="io.github.bonigarcia:webdrivermanager:5.0.3" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="com.github.docker-java:docker-java:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="com.github.docker-java:docker-java-core:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
                 <item name="com.github.docker-java:docker-java-api:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
               </path>
               <path>
@@ -2082,16 +2071,6 @@
                 <item name="io.github.bonigarcia:webdrivermanager:5.0.3" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
                 <item name="com.github.docker-java:docker-java:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
                 <item name="com.github.docker-java:docker-java-core:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="test2" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testRuntimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-                <item name="io.github.bonigarcia:webdrivermanager:5.0.3" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="com.github.docker-java:docker-java:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="com.github.docker-java:docker-java-core:3.2.12" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="com.fasterxml.jackson.core:jackson-databind:2.10.3" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -2732,7 +2711,28 @@
       <recent name="C:\Users\Nhi_Chung\Desktop\selenium\project\NhiChung_repo\src\test\resources\drivers" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UITesting">
+  <component name="RunManager" selected="TestNG.Login_APITesting">
+    <configuration name="ReqresTesting.delayResponse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.NhiChung.Selenium.restAssured44.ReqresTesting.delayResponse&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="UITesting.searchNormalText" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -2753,6 +2753,47 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
+    </configuration>
+    <configuration name="APITesting_Reqres" type="TestNG">
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.NhiChung.Selenium.restAssured44" />
+      <option name="MAIN_CLASS_NAME" value="com.NhiChung.Selenium.restAssured44.ReqresTesting" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Login_APITesting" type="TestNG">
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.NhiChung.Selenium.restAssured44" />
+      <option name="MAIN_CLASS_NAME" value="com.NhiChung.Selenium.restAssured44.ReqresTesting" />
+      <option name="METHOD_NAME" value="registerNewUser" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="UITesting" type="TestNG">
       <shortenClasspath name="NONE" />
@@ -2797,11 +2838,15 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.UITesting.searchNormalText" />
+      <item itemvalue="Gradle.ReqresTesting.delayResponse" />
+      <item itemvalue="TestNG.APITesting_Reqres" />
+      <item itemvalue="TestNG.Login_APITesting" />
       <item itemvalue="TestNG.UITesting" />
       <item itemvalue="TestNG.searchNormalText" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ReqresTesting.delayResponse" />
         <item itemvalue="Gradle.UITesting.searchNormalText" />
       </list>
     </recent_temporary>

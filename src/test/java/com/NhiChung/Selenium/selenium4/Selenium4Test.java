@@ -31,20 +31,10 @@ public class Selenium4Test extends SeleniumBaseTest {
         MyLogger.LOGGER.info("finish hello");
     }
 
-    @Test
-    void searchNormalText() {
-        MyLogger.LOGGER.info("Start verify Search normal test");
-
-        String title = new GoogleHomeSearchPage()
-                .setTextToSearchField("Vietnam")
-                .clickGoogleSearchButton()
-                .getTitle();
-        Assert.assertTrue(title.contains("Vietnam"));
-
-        MyLogger.LOGGER.info("Pass");
-    }
-
-    @Test
+    @Test(priority = 0, description = "Search a text with extra spaces")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Test Description: search with invalid input")
+    @Story("invalid input")
     void trimText() {
         // Trim method() is the method returns a new string, without any of the leading or the trailing white spaces.
         MyLogger.LOGGER.info("Start verify trim function of search field");
@@ -57,7 +47,10 @@ public class Selenium4Test extends SeleniumBaseTest {
         MyLogger.LOGGER.info("Pass");
     }
 
-    @Test
+    @Test(priority = 0, description = "Test google calculator")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Test Description: enter operation into search field and check display calculator")
+    @Story("google calculator")
     void googleCalculator() {
         MyLogger.LOGGER.info("Verify Google Calculator");
         String result = new GoogleHomeSearchPage()
@@ -69,22 +62,11 @@ public class Selenium4Test extends SeleniumBaseTest {
         MyLogger.LOGGER.info("Pass");
     }
 
-    @Test
+    @Test(priority = 0, description = "Test google translate")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Test Description: enter language and check display google translate")
+    @Story("google translate")
     void googleTranslate() {
-        MyLogger.LOGGER.info("Verify google Translate");
-
-        String result = new GoogleHomeSearchPage()
-                .setTextToSearchField("translate")
-                .goToTranslatePage()
-                .getTranslateResult("xin chao");
-
-        Assert.assertTrue(result.equals("hello") || result.equals("Hello") || result.equals("Hi") || result.equals("Hi"));
-
-        MyLogger.LOGGER.info("Pass");
-    }
-
-    @Test
-    void googleTranslate2() {
         MyLogger.LOGGER.info("Verify google Translate");
 
         String result = new GoogleHomeSearchPage()
@@ -97,7 +79,10 @@ public class Selenium4Test extends SeleniumBaseTest {
         MyLogger.LOGGER.info("Pass");
     }
 
-    @Test
+    @Test(priority = 0, description = "Test google color picker")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Test Description: enter color picker and check display google color picker")
+    @Story("google color picker")
     void colorPicker() {
         MyLogger.LOGGER.info("Verify google Color Picker");
 
