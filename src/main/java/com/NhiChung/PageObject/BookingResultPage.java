@@ -1,6 +1,6 @@
-package com.NhiChung.Selenium.PageObject;
+package com.NhiChung.PageObject;
 
-import com.NhiChung.Selenium.Core.MyLogger;
+import com.NhiChung.Core.MyLogger;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 

@@ -1,11 +1,15 @@
 package com.NhiChung.Selenium.UITesting;
 
-import com.NhiChung.Selenium.Core.MyLogger;
-import com.NhiChung.Selenium.PageObject.BookingHomePage;
+import com.NhiChung.Core.MyLogger;
+import com.NhiChung.PageObject.BookingHomePage;
+import com.codeborne.selenide.Configuration;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Selenide.open;
+
 public class UITesting extends BaseTest{
-    
     @Test
     public void BookingCheck() {
         MyLogger.LOGGER.info("Verify search feature");

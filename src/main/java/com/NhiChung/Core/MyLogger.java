@@ -1,4 +1,4 @@
-package com.NhiChung.Selenium.Core;
+package com.NhiChung.Core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
