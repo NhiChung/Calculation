@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="RegressionTest">
-    <test verbose="2" preserve-order="true" name="">
+    <test verbose="2" preserve-order="true" name="RegressionTest">
         <classes>
             <class name="com.NhiChung.Selenium.UITesting.Test.TestBrowser"></class>
             <class name="com.NhiChung.Selenium.UITesting.Test.TestData"></class>

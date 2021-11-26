@@ -42,10 +42,4 @@ public class BaseTest extends DataParams {
 
         open(baseURL);
     }
-
-    @AfterMethod
-    public void postCondition() {
-        Selenide.closeWebDriver();
-        clearBrowserCookies();
-    }
 }
