@@ -31,8 +31,13 @@ dependencies {
 
 ext.testFile = System.getProperty('Test_Suite')
 
+apply plugin: 'application'
+apply plugin: 'java'
+
 tasks.withType(JavaExec) {
-    systemProperty "environment", System.getProperty("environment")
+    systemProperties = [
+            environment: System.getProperty('environment', 'EDGE'),
+    ]
 }
 
 test {
