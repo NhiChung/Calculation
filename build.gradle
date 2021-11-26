@@ -29,15 +29,11 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
 }
 
-
-
-
-
 test {
     useTestNG{
+        suites "src/test/java/com/NhiChung/Selenium/UITesting/TestSuite/"
 //        ext.testFile = System.getProperty('Test_Suite')
         systemProperty "environment", System.getProperty("environment")
-
     }
 //    systemProperties = System.properties
 //
