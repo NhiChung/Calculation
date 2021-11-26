@@ -31,13 +31,12 @@ dependencies {
 
 test {
     useTestNG{
-        suites "src/test/java/com/NhiChung/Selenium/UITesting/TestSuite/"
 //        ext.testFile = System.getProperty('Test_Suite')
 
         systemProperty "environment", System.getProperty("environment")
         systemProperty "suite", System.getProperty("suite")
         def suiteToRun = System.getProperty("suite")
-        suites "src/test/java/com/NhiChung/Selenium/UITesting/TestSuite/" + suiteToRun
+        suites './src/test/java/com/NhiChung/Selenium/UITesting/TestSuite/' + suiteToRun
     }
 //    options.suites("src/test/java/com/NhiChung/Selenium/UITesting/TestSuite/")
 //    systemProperties = System.properties
