@@ -8,7 +8,6 @@ import org.testng.annotations.BeforeMethod;
 
 import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static com.codeborne.selenide.Selenide.open;
-import com.codeborne.selenide.Configuration;
 public class BaseTest extends DataParams {
 
     public void setUpChromeDrive() {
@@ -26,7 +25,7 @@ public class BaseTest extends DataParams {
         Configuration.browser = "edge";
     }
 
-    public void preCondition(String browser) {
+    public void chooseBrowser(String browser) {
         Configuration.reportsFolder = "test-result/reports";
 
         switch (browser) {

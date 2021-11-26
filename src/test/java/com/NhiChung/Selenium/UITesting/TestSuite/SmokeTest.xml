@@ -3,7 +3,7 @@
 <suite name="SmokeTesr">
     <test verbose="2" preserve-order="true" name="">
         <classes>
-            <class name="com.NhiChung.Selenium.UITesting.Test.TestStaysTab"></class>
+            <class name="com.NhiChung.Selenium.UITesting.Test.TestBrowser"></class>
         </classes>
     </test>
 </suite>

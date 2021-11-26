@@ -8,31 +8,13 @@ import io.qameta.allure.SeverityLevel;
 import main.java.com.NhiChung.PageObject.BookingHomePage;
 import org.testng.annotations.Test;
 
-public class TestStaysTab extends BaseTest {
-
-//    @Test(dataProvider = "dp", priority = 1, description = "Search a normal test and get relative results")
-//    @Severity(SeverityLevel.BLOCKER)
-//    @Description("Test Description: search with valid input")
-//    public void BookingCheck(String location, String month, int startDate, int endDate, int adult, String locationResult, String browser) {
-//        preCondition(browser);
-//        MyLogger.LOGGER.info("Verify search feature");
-//        new BookingHomePage()
-//                .chooseLanguage()
-//                .setTextToLocationField(location)
-//                .chooseMonth(month)
-//                .chooseDate(startDate, endDate)
-//                .chooseAdult(adult)
-//                .clickSearchButton()
-//                .checkLocationSearchResult(locationResult);
-//
-//        MyLogger.LOGGER.info("Search feature do well");
-//    }
+public class TestBrowser extends BaseTest {
 
     @Test(dataProvider = "browser", priority = 1, description = "Search a normal test and get relative results")
     @Severity(SeverityLevel.BLOCKER)
     @Description("Test Description: search with valid input")
     public void BookingCheck(String browser) {
-        preCondition(browser);
+        chooseBrowser(browser);
         MyLogger.LOGGER.info("Verify search feature");
         new BookingHomePage()
                 .chooseLanguage()
