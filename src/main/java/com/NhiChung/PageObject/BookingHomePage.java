@@ -1,8 +1,9 @@
-package com.NhiChung.PageObject;
+package main.java.com.NhiChung.PageObject;
 
 import com.NhiChung.Core.MyLogger;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -33,8 +34,7 @@ public class BookingHomePage {
 
     public BookingHomePage setTextToLocationField(String text) {
         MyLogger.LOGGER.info("Search Location: " + text);
-        searchLocationField.setValue(text);
-
+        searchLocationField.sendKeys(text);
         return this;
     }
 
@@ -94,7 +94,7 @@ public class BookingHomePage {
 
     public BookingResultPage clickSearchButton() {
         MyLogger.LOGGER.info("Click search button");
-        searchButton.click();
+        searchLocationField.sendKeys(Keys.ENTER);
 
         return new BookingResultPage();
     }

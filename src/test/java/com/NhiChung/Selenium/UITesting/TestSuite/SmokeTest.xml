@@ -1,14 +1,9 @@
-<test name="SmokeTestSuite" preserve-order="false">
-    <classes>
-
-        <class name="UITesting">
-            <methods>
-                <include name="m1" />
-                <include name="m2" />
-            </methods>
-        </class>
-
-        <class name="test.Test2" />
-
-    </classes>
-</test>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmokeTesr">
+    <test verbose="2" preserve-order="true" name="">
+        <classes>
+            <class name="com.NhiChung.Selenium.UITesting.Test.TestStaysTab"></class>
+        </classes>
+    </test>
+</suite>

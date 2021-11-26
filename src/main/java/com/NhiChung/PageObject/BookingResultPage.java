@@ -1,4 +1,4 @@
-package com.NhiChung.PageObject;
+package main.java.com.NhiChung.PageObject;
 
 import com.NhiChung.Core.MyLogger;
 import com.codeborne.selenide.SelenideElement;
@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 
 public class BookingResultPage {
 

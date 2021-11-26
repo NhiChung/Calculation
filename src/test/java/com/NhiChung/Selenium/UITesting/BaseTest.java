@@ -1,34 +1,52 @@
 package com.NhiChung.Selenium.UITesting;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 
+import static com.codeborne.selenide.Selenide.clearBrowserCookies;
 import static com.codeborne.selenide.Selenide.open;
+import com.codeborne.selenide.Configuration;
+public class BaseTest extends DataParams {
 
-public class BaseTest {
-    @DataProvider(name = "browser")
-    public Object[][] dataProviderBrowser(){
-        return new Object[][]{
-                {"firefox","firefox"},{"chrome","chrome"},{"edge","edge"}
-        };
+    public void setUpChromeDrive() {
+        WebDriverManager.chromedriver().setup();
+        Configuration.browser = "chrome";
     }
 
-    @DataProvider(name = "test-data")
-    public Object[][] dataProviderSearch(){
-        return new Object[][]{
-                {"test1","Hanoi"},{"test2","Paris"},{"test3","Tokyo"}
-        };
+    public void setUpFirefoxDrive() {
+        WebDriverManager.firefoxdriver().setup();
+        Configuration.browser = "firefox";
     }
 
-    @BeforeMethod
-    public void preCondition() {
+    public void setUpEdgeDrive() {
+        WebDriverManager.edgedriver().setup();
+        Configuration.browser = "edge";
+    }
+
+    public void preCondition(String browser) {
         Configuration.reportsFolder = "test-result/reports";
 
-        WebDriverManager.chromedriver().setup();
-        System.setProperty("selenide.browser", "Chrome");
+        switch (browser) {
+            case "FIREFOX":
+                setUpFirefoxDrive();
+                break;
+            case "CHROME":
+                setUpChromeDrive();
+                break;
+            case  "EDGE":
+                setUpEdgeDrive();
+                break;
+        }
 
-        open("https://www.booking.com/");
+        open(baseURL);
+    }
+
+    @AfterMethod
+    public void postCondition() {
+        Selenide.closeWebDriver();
+        clearBrowserCookies();
     }
 }
