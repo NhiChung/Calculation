@@ -32,7 +32,7 @@ dependencies {
 ext.testFile = System.getProperty('Test_Suite')
 
 test {
-//    systemProperties = System.properties
+    systemProperties = System.properties
 
     systemProperty "environment", System.getProperty("environment")
     useTestNG {
