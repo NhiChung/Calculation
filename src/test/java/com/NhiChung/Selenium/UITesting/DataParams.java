@@ -17,7 +17,7 @@ public class DataParams {
                     {"EDGE"},{"FIREFOX"},{"CHROME"}
             };
         } else {
-            return new Object[][]{{env}};
+            return new Object[][]{{env},};
         }
     }
 
