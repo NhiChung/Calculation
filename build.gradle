@@ -32,9 +32,7 @@ dependencies {
 ext.testFile = System.getProperty('Test_Suite')
 
 tasks.withType(Test) {
-    systemProperties = [
-            environment: System.getProperty('environment', 'EDGE'),
-    ]
+    systemProperty "environment", System.getProperty("environment")
 }
 
 test {
