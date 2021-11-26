@@ -32,7 +32,6 @@ dependencies {
 ext.testFile = System.getProperty('Test_Suite')
 
 apply plugin: 'application'
-apply plugin: 'java'
 
 /*tasks.withType(JavaExec) {
     systemProperties = [
@@ -40,24 +39,16 @@ apply plugin: 'java'
     ]
 }*/
 
-task runApp(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
+//tasks.withType(JavaExec){
 
-    main = 'testit.TomcatApp'
-
-    // arguments to pass to the application
-    //  args 'myarg1 -rest'    <- came in as 1 string
-
-
-    // and to pass in all -D system property args:
-    systemProperties = System.properties
-}
+//    systemProperties = System.properties
+//}
 
 test {
-//    systemProperties = System.properties
+    systemProperties = System.properties
 //
 //    systemProperty "environment", System.getProperty("environment")
-    useTestNG {
-        suites "src/test/resources/$testFile"
-    }
+//    useTestNG {
+//        suites "src/test/resources/$testFile"
+//    }
 }
