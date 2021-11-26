@@ -30,24 +30,11 @@ dependencies {
 }
 
 test {
-    useTestNG{
-//        ext.testFile = System.getProperty('Test_Suite')
-
+    useTestNG {
         systemProperty "environment", System.getProperty("environment")
         systemProperty "suite", System.getProperty("suite")
         def suiteToRun = System.getProperty("suite")
         suites './src/test/java/com/NhiChung/Selenium/UITesting/TestSuite/' + suiteToRun
     }
-//    options.suites("src/test/java/com/NhiChung/Selenium/UITesting/TestSuite/")
-//    systemProperties = System.properties
-//
-//    systemProperty "environment", project.getProperty("environment")
-//    useTestNG {
-//        suites "src/test/resources/$testFile"
-//    }
 }
-
-//task intTest(type: Test) {
-//    systemProperties project.properties.subMap(["foo", "bar"])
-//}
 
