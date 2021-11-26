@@ -31,21 +31,22 @@ dependencies {
 
 ext.testFile = System.getProperty('Test_Suite')
 
-apply plugin: 'application'
+task execute (type:JavaExec) {
 
-/*tasks.withType(JavaExec) {
-    systemProperties = [
-            environment: System.getProperty('environment', 'EDGE'),
-    ]
-}*/
+    classpath = sourceSets.main.runtimeClasspath
 
-//tasks.withType(JavaExec){
+    /* Can pass all the properties: */
+//    systemProperties System.getProperties()
 
-//    systemProperties = System.properties
-//}
+    /* Or just each by name: */
+    systemProperty "environment", System.getProperty("environment")
+
+    /* Need to split the space-delimited value in the exec.args */
+//    args System.getProperty("exec.args", "").split()
+}
 
 test {
-    systemProperties = System.properties
+//    systemProperties = System.properties
 //
 //    systemProperty "environment", System.getProperty("environment")
 //    useTestNG {
