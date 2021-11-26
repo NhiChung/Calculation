@@ -29,9 +29,7 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
 }
 
-plugins {
-    id 'java' // adds 'test' task
-}
+
 
 ext.testFile = System.getProperty('Test_Suite')
 
@@ -41,7 +39,7 @@ test {
     }
 //    systemProperties = System.properties
 //
-    systemProperty "environment", project.getProperty("environment")
+//    systemProperty "environment", project.getProperty("environment")
 //    useTestNG {
 //        suites "src/test/resources/$testFile"
 //    }
