@@ -31,11 +31,13 @@ dependencies {
 
 
 
-ext.testFile = System.getProperty('Test_Suite')
+
 
 test {
     useTestNG{
+        ext.testFile = System.getProperty('Test_Suite')
         systemProperty "environment", System.getProperty("environment")
+
     }
 //    systemProperties = System.properties
 //
@@ -48,3 +50,4 @@ test {
 //task intTest(type: Test) {
 //    systemProperties project.properties.subMap(["foo", "bar"])
 //}
+
