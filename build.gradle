@@ -32,6 +32,8 @@ dependencies {
 ext.testFile = System.getProperty('Test_Suite')
 
 test {
+    // systemProperties = System.properties
+    systemProperty "environment", System.getProperty("environment")
     useTestNG {
         suites "src/test/resources/$testFile"
     }
