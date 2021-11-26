@@ -30,11 +30,11 @@ public class DataParams {
         };
     }
 
-    @DataProvider(name="dp")
+    /*@DataProvider(name="dp")
     public Object[][] dataProvider() {
         List<Object[]> result = Lists.newArrayList();
         result.addAll(Arrays.asList(testData()));
         result.addAll(Arrays.asList(testBrowsers()));
         return result.toArray(new Object[result.size()][]);
-    }
+    }*/
 }
