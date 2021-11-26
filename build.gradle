@@ -34,10 +34,23 @@ ext.testFile = System.getProperty('Test_Suite')
 apply plugin: 'application'
 apply plugin: 'java'
 
-tasks.withType(JavaExec) {
+/*tasks.withType(JavaExec) {
     systemProperties = [
             environment: System.getProperty('environment', 'EDGE'),
     ]
+}*/
+
+task runApp(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+
+    main = 'testit.TomcatApp'
+
+    // arguments to pass to the application
+    //  args 'myarg1 -rest'    <- came in as 1 string
+
+
+    // and to pass in all -D system property args:
+    systemProperties = System.properties
 }
 
 test {
