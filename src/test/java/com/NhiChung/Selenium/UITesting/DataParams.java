@@ -7,18 +7,18 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DataParams {
-//    private final String env = System.getProperty("environment");
+    private String environment = System.getProperty("environment");
     public String baseURL = "https://www.booking.com/";
-    private final String env = "ALL";
+//    private final String env = "ALL";
 
     @DataProvider(name = "browser")
     public Object[][] testBrowsers(){
-        if (env.equals("ALL") || env == null) {
+        if (environment.equals("ALL") || environment.equals(null)) {
             return new Object[][]{
                     {"EDGE"},{"FIREFOX"},{"CHROME"}
             };
         } else {
-            return new Object[][]{{env}};
+            return new Object[][]{{environment}};
         }
     }
 
