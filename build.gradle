@@ -31,25 +31,15 @@ dependencies {
 
 ext.testFile = System.getProperty('Test_Suite')
 
-task execute (type:JavaExec) {
-
-    classpath = sourceSets.main.runtimeClasspath
-
-    /* Can pass all the properties: */
-//    systemProperties System.getProperties()
-
-    /* Or just each by name: */
-    systemProperty "environment", System.getProperty("environment")
-
-    /* Need to split the space-delimited value in the exec.args */
-//    args System.getProperty("exec.args", "").split()
-}
-
 test {
 //    systemProperties = System.properties
 //
-//    systemProperty "environment", System.getProperty("environment")
+    systemProperty "environment", project.getProperty("environment")
 //    useTestNG {
 //        suites "src/test/resources/$testFile"
 //    }
 }
+
+//task intTest(type: Test) {
+//    systemProperties project.properties.subMap(["foo", "bar"])
+//}
