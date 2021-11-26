@@ -1,4 +1,4 @@
-package com.NhiChung.Core.model;
+package main.java.com.NhiChung.Core.model;
 
 public enum DriverType {
     CHROME,

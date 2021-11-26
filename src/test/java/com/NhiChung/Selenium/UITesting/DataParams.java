@@ -9,7 +9,6 @@ import java.util.List;
 public class DataParams {
     private final String env = System.getProperty("environment");
     public String baseURL = "https://www.booking.com/";
-//    private final String env = "ALL";
 
     @DataProvider(name = "browser")
     public Object[][] testBrowsers(){
