@@ -31,6 +31,12 @@ dependencies {
 
 ext.testFile = System.getProperty('Test_Suite')
 
+tasks.withType(Test) {
+    systemProperties = [
+            environment: System.getProperty('environment', '$BrowserType'),
+    ]
+}
+
 test {
     systemProperties = System.properties
 
