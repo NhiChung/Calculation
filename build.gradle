@@ -31,7 +31,7 @@ dependencies {
 
 ext.testFile = System.getProperty('Test_Suite')
 
-tasks.withType(Test) {
+tasks.withType(JavaExec) {
     systemProperty "environment", System.getProperty("environment")
 }
 
