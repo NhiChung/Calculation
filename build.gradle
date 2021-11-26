@@ -35,7 +35,7 @@ dependencies {
 
 test {
     useTestNG{
-        ext.testFile = System.getProperty('Test_Suite')
+//        ext.testFile = System.getProperty('Test_Suite')
         systemProperty "environment", System.getProperty("environment")
 
     }
