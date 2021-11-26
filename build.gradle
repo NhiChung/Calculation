@@ -33,14 +33,14 @@ ext.testFile = System.getProperty('Test_Suite')
 
 tasks.withType(Test) {
     systemProperties = [
-            environment: System.getProperty('environment', '$BrowserType'),
+            environment: System.getProperty('environment', 'EDGE'),
     ]
 }
 
 test {
-    systemProperties = System.properties
-
-    systemProperty "environment", System.getProperty("environment")
+//    systemProperties = System.properties
+//
+//    systemProperty "environment", System.getProperty("environment")
     useTestNG {
         suites "src/test/resources/$testFile"
     }
