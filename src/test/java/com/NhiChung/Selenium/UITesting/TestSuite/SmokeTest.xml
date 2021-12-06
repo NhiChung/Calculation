@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmokeTest">
+    <test verbose="2" preserve-order="true" name="SmokeTest">
+        <classes>
+            <class name="com.NhiChung.Selenium.UITesting.Test.TestBrowser"></class>
+        </classes>
+    </test>
+</suite>
